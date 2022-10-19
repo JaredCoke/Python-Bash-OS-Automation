@@ -1,0 +1,20 @@
+Rename this file to .sh extention
+#run this w/ this format: 
+#sh bash_move_files.sh
+# OR
+#bash bash_move_files.sh
+
+Sign in to remote server
+ssh serapb3@sera-maestro1-pri
+
+Copy files from server to local desitination on Z drive
+- prepend SV# in front of these files
+- ideally rename file here
+cp -u file/path/to/<original file> file/path/to/<newfile>
+
+#renames file (linux)
+sed -i.old '1s;^;SV1_;' inFile
+
+
+#method for copying data from Linux to Windows:
+C:\Program Files\PuTTY>pscp user@X.Y.Z.A:/tmp/file.txt \Users\user
